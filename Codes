@@ -1,0 +1,19 @@
+print("===== WATER TANK ESTIMATOR =====")
+
+capacity = float(input("Enter tank capacity (litres): "))
+flow = float(input("Enter water flow rate (litres/minute): "))
+
+if capacity <= 0 or flow <= 0:
+    print("Please enter positive values.")
+else:
+    time = capacity / flow
+
+    hours = int(time // 60)
+    minutes = time % 60
+
+    print("\n----- RESULT -----")
+    print("Tank Capacity:", capacity, "litres")
+    print("Flow Rate:", flow, "litres/minute")
+    print("Filling Time:", round(time, 2), "minutes")
+    print("Approximate Time:", hours, "hours",
+          round(minutes, 2), "minutes")
